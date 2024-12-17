@@ -18,7 +18,7 @@ const userSchema=new mongoose.Schema({
     },
 
     phoneNumber:{
-        type:Number
+        type:String
     },
     
     address:{
@@ -26,7 +26,7 @@ const userSchema=new mongoose.Schema({
     },
 
     ward:{
-        type:Number,
+        type:String,
         require:[true,"please enter your ward"]
     },
 
@@ -37,4 +37,4 @@ const userSchema=new mongoose.Schema({
     
 })
 
-module.exports=mongoose.models("User",userSchema);
+module.exports=mongoose.model("User",userSchema);
